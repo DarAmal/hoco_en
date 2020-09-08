@@ -1,0 +1,132 @@
+
+.tabs {
+	max-width: 98%;
+	margin: 0 0 30px;
+	display: inline-block;
+}
+.tabs__caption {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	list-style: none;
+	position: relative;
+	margin: -1px 0 0 -1px;
+}
+.tabs__caption li:last-child:before {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	right: -2px;
+	z-index: -1;
+	height: 5px;
+	background: #7DCA86;
+}
+.tabs__caption:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.tabs__caption li span {
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	background: #a50af5;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 22px;
+	font-size: 11px;
+	color: #fff;
+	font-weight: 700;
+	margin-left: 10px;
+}
+
+.tabs__caption li {
+	font-family: 'HocoFont';
+	padding: 9px 35px;
+	margin: 0px 5px 0 1px;
+	background: #f7f7f7;
+	color: #000;
+	position: relative;
+	border-width: 1px 1px 0;
+	text-align: center;
+	font-weight: 700;
+	border-bottom: 2px solid #ccc;
+	text-transform: uppercase;
+}
+.tabs__caption li:not(.active) {
+	cursor: pointer;
+}
+.tabs__caption li:not(.active):hover {
+	background: #fff;
+	border-color: #ccc;
+}
+.tabs__caption .active {
+	border-bottom: 2px solid #f22217;
+	background: #FFF;
+	color: #000;
+}
+.tabs__caption .active:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background: #FFF;
+}
+.tabs__content {
+	display: none;
+	background: #FFF;
+	padding: 20px 25px;
+}
+.tabs__content.active {
+	display: block;
+	width: 110%;
+}
+
+.tabs__content.body_tabs.active {
+	display: block;
+	width: 100%;
+}
+.tabs__content.prop.active{
+	width: 110%;
+}
+
+.vertical .tabs__caption {
+	float: left;
+	display: block;
+}
+.vertical .tabs__caption li {
+	float: none;
+	border-width: 2px 0 2px 2px;
+	border-radius: 5px 0 0 5px;
+}
+.vertical .tabs__caption li:last-child:before {
+	display: none;
+}
+.vertical .tabs__caption .active:after {
+	left: auto;
+	top: 0;
+	right: -2px;
+	bottom: 0;
+	width: 2px;
+	height: auto;
+}
+.vertical .tabs__content {
+	overflow: hidden;
+}
+
+@media screen and (max-width: 650px) {
+
+	.tabs__caption li {
+		-webkit-flex: 1 0 auto;
+		    -ms-flex: 1 0 auto;
+		        flex: 1 0 auto;
+	}
+	
+
+}

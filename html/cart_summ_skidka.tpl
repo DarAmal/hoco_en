@@ -1,0 +1,1 @@
+<b>Скидка от суммы заказа</b> <span>{if $cart->total_do>=$settings->summ}{$cart->total_do-$cart->total_price} {$currency->sign}{else}Действует от {$settings->summ} {$currency->sign}{/if}</span>
